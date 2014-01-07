@@ -102,6 +102,7 @@ cd
 echo "Port 143" >> /etc/ssh/sshd_config
 echo "Port  22" >> /etc/ssh/sshd_config
 service sshd restart
+chkconfig sshd on
 
 # install dropbear
 yum -y install dropbear
@@ -130,10 +131,11 @@ service fail2ban start
 chkconfig fail2ban on
 
 # install squid
-# apt-get -y install squid
+yum -y install squid
 # wget -O /etc/squid/squid.conf "https://raw.github.com/arieonline/autoscript/master/conf/squid.conf"
 # sed -i $MYIP2 /etc/squid/squid.conf;
-# service squid restart
+service squid restart
+chkconfig squid on
 
 # install webmin
 cd
