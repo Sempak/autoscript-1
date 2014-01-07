@@ -160,6 +160,8 @@ echo "vnstat   : http://$MYIP/vnstat/"
 echo "MRTG     : http://$MYIP/mrtg/"
 echo "Timezone : Asia/Jakarta"
 echo "Fail2Ban : [on]
-echo "IPv6     : [off]
+echo "IPv6     : [off]"
+echo ""
+echo "SILAHKAN REBOOT VPS ANDA !"
 echo ""
 echo "==============================================="
