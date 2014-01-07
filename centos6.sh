@@ -52,6 +52,7 @@ sed -i 's/www-data/nginx/g' /etc/nginx/nginx.conf
 mkdir -p /home/vps/public_html
 echo "<pre>hacked by @arieonline</pre>" > /home/vps/public_html/index.html
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
+rm /etc/nginx/conf.d/*
 wget -O /etc/nginx/conf.d/vps.conf "https://raw.github.com/arieonline/autoscript/master/conf/vps.conf"
 sed -i 's/apache/nginx/g' /etc/php-fpm.d/www.conf
 chmod -R +rx /home/vps
@@ -137,7 +138,7 @@ chkconfig fail2ban on
 # install webmin
 cd
 wget http://prdownloads.sourceforge.net/webadmin/webmin-1.660-1.noarch.rpm
-pm -i webmin-1.660-1.noarch.rpm;
+rpm -i webmin-1.660-1.noarch.rpm;
 rm webmin-1.660-1.noarch.rpm
 service webmin restart
 
@@ -155,7 +156,7 @@ echo "Squid    : 8080 (limit to IP SSH)"
 echo ""
 echo "Fitur lain"
 echo "----------"
-echo "Webmin   : https://$MYIP:10000/"
+echo "Webmin   : http://$MYIP:10000/"
 echo "vnstat   : http://$MYIP/vnstat/"
 echo "MRTG     : http://$MYIP/mrtg/"
 echo "Timezone : Asia/Jakarta"
