@@ -159,7 +159,7 @@ echo "Webmin   : https://$MYIP:10000/"
 echo "vnstat   : http://$MYIP/vnstat/"
 echo "MRTG     : http://$MYIP/mrtg/"
 echo "Timezone : Asia/Jakarta"
-echo "Fail2Ban : [on]
+echo "Fail2Ban : [on]"
 echo "IPv6     : [off]"
 echo ""
 echo "SILAHKAN REBOOT VPS ANDA !"
