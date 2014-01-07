@@ -76,6 +76,8 @@ MYIP2="s/xxxxxxxxx/$MYIP/g";
 sed -i $MYIP2 /etc/iptables.up.rules;
 iptables-restore < /etc/iptables.up.rules
 service openvpn restart
+wget -O /home/vps/public_html/1194-client.conf "https://raw.github.com/arieonline/autoscript/master/conf/1194-client.conf"
+sed -i $MYIP2 /home/vps/public_html/1194-client.conf;
 cd
 
 # install mrtg
