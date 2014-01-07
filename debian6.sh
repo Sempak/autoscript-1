@@ -140,3 +140,26 @@ dpkg --install webmin_1.660_all.deb;
 apt-get -y -f install;
 rm /root/webmin_1.660_all.deb
 service webmin restart
+
+# info
+clear
+echo "JualSSH.com | @arieonline | KangArie | 7946F434"
+echo "==============================================="
+echo ""
+echo "Service"
+echo "-------"
+echo "OpenVPN  : TCP 1194"
+echo "OpenSSH  : 22, 143"
+echo "Dropbear : 109, 110, 443"
+echo "Squid    : 8080 (limit to IP SSH)"
+echo ""
+echo "Fitur lain"
+echo "----------"
+echo "Webmin   : https://$MYIP:10000/"
+echo "vnstat   : http://$MYIP/vnstat/"
+echo "MRTG     : http://$MYIP/mrtg/"
+echo "Timezone : Asia/Jakarta"
+echo "Fail2Ban : [on]
+echo "IPv6     : [off]
+echo ""
+echo "==============================================="
